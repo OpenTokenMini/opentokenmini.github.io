@@ -3,10 +3,26 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>OpenTokenMini</title>
+<title>OpenTokenMini: see what your AI agents spend, and what you get for it</title>
 <meta name="description" content="An open method and reference implementation to see what AI agents spend, on what work, and what comes out of it.">
 <link rel="canonical" href="https://opentokenmini.org/">
 <link rel="icon" href="logo.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="OpenTokenMini">
+<meta property="og:url" content="https://opentokenmini.org/">
+<meta property="og:title" content="OpenTokenMini: see what your AI agents spend, and what you get for it">
+<meta property="og:description" content="Most teams paying for AI agents can't say what the money buys. An open method and reference implementation to find out, across OpenAI, Anthropic and open models.">
+<meta property="og:image" content="https://opentokenmini.org/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareSourceCode","name":"OpenTokenMini",
+ "description":"Open method and reference implementation to measure what AI agents spend, on which work, and what comes out of it.",
+ "url":"https://opentokenmini.org/","codeRepository":"https://github.com/OpenTokenMini/opentokenmini",
+ "license":"https://www.apache.org/licenses/LICENSE-2.0","programmingLanguage":"Python",
+ "sameAs":["https://github.com/OpenTokenMini","https://docs.opentokenmini.org/"]}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;800&display=swap" rel="stylesheet">
@@ -17,8 +33,9 @@
          -webkit-font-smoothing:antialiased }
   main { max-width:760px; padding:56px 24px }
   h1 { display:flex; gap:14px; align-items:center; justify-content:center; margin:0;
-       font:400 32px/1 "JetBrains Mono", ui-monospace, monospace; letter-spacing:.06em; text-transform:uppercase }
+       font:400 32px/1 "JetBrains Mono", ui-monospace, monospace; letter-spacing:.02em; text-transform:uppercase }
   h1 b { font-weight:800 }
+  h1 b:first-child { margin-right:.28em } h1 b:last-child { margin-left:.28em }
   .lead { font-size:30px; line-height:1.25; font-weight:600; letter-spacing:-.015em; max-width:560px; margin:0 auto 18px }
   p { max-width:540px; margin:0 auto 20px }
   figure { margin:44px 0 40px }
@@ -37,7 +54,7 @@
 <main>
   <h1><img src="logo.svg" width="40" height="40" alt=""><span><b>Open</b>Token<b>Mini</b></span></h1>
   <nav>
-    <a class="go" href="https://docs.opentokenmini.org/#/analyze/METHOD.md">Read the method →</a>
+    <a class="go" href="https://docs.opentokenmini.org/analyze/METHOD.html">Read the method →</a>
     <a class="go" href="https://github.com/OpenTokenMini/opentokenmini">Get the code →</a>
   </nav>
   <p class="lead">Most teams paying for AI agents can't say what the money buys.</p>

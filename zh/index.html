@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenTokenMini：看清 AI 智能体花了多少钱，换来了什么</title>
+<meta name="description" content="一套开放的方法和参考实现，用来看清 AI 智能体花了多少钱、花在什么工作上、产出了什么。">
+<link rel="canonical" href="https://opentokenmini.org/zh/">
+<link rel="alternate" hreflang="en" href="https://opentokenmini.org/">
+<link rel="alternate" hreflang="es" href="https://opentokenmini.org/es/">
+<link rel="alternate" hreflang="zh-Hans" href="https://opentokenmini.org/zh/">
+<link rel="alternate" hreflang="x-default" href="https://opentokenmini.org/">
+<link rel="icon" href="/logo.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="OpenTokenMini">
+<meta property="og:url" content="https://opentokenmini.org/zh/">
+<meta property="og:title" content="OpenTokenMini：看清 AI 智能体花了多少钱，换来了什么">
+<meta property="og:description" content="大多数为 AI 智能体付费的团队，说不清这笔钱买到了什么。一套开放的方法和参考实现，帮你弄清楚，支持 OpenAI、Anthropic 和开源模型。">
+<meta property="og:image" content="https://opentokenmini.org/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareSourceCode","name":"OpenTokenMini",
+ "description":"Open method and reference implementation to measure what AI agents spend, on which work, and what comes out of it.",
+ "url":"https://opentokenmini.org/","codeRepository":"https://github.com/OpenTokenMini/opentokenmini",
+ "license":"https://www.apache.org/licenses/LICENSE-2.0","programmingLanguage":"Python",
+ "sameAs":["https://github.com/OpenTokenMini","https://docs.opentokenmini.org/"]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;800&display=swap" rel="stylesheet">
+<style>
+  :root { --bg:#eef1ec; --ink:#1f2a22; --dim:#5f6e62; --green:#2f7a4f; --line:#cdd5ce }
+  body { margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center;
+         background:var(--bg); color:var(--ink); font:400 18px/1.6 Inter, system-ui, "PingFang SC", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif; text-align:center;
+         -webkit-font-smoothing:antialiased }
+  main { max-width:760px; padding:56px 24px }
+  h1 { display:flex; gap:14px; align-items:center; justify-content:center; margin:0;
+       font:400 32px/1 "JetBrains Mono", ui-monospace, monospace; letter-spacing:.02em; text-transform:uppercase }
+  h1 b { font-weight:800 }
+  h1 b:first-child { margin-right:.28em } h1 b:last-child { margin-left:.28em }
+  .lead { font-size:30px; line-height:1.25; font-weight:600; letter-spacing:-.015em; max-width:560px; margin:0 auto 18px }
+  p { max-width:540px; margin:0 auto 20px }
+  figure { margin:44px 0 40px }
+  figure img { width:100% }
+  nav { margin:28px 0 48px; display:flex; gap:12px; justify-content:center; flex-wrap:wrap }
+  .go { font:500 15px Inter, system-ui, sans-serif; color:#fff; background:var(--green); padding:12px 20px; border-radius:8px; text-decoration:none }
+  .go + .go { background:none; color:var(--green); box-shadow:inset 0 0 0 1.5px var(--green) }
+  .go:hover { opacity:.88 }
+  .small { color:var(--dim); font-size:15px }
+  .talk { display:inline-block; margin-top:10px; padding:12px 22px; border-radius:999px; background:#dfe8e0;
+          color:var(--green); font-weight:600; text-decoration:none; box-shadow:0 1px 0 #c5d3c8 }
+  .talk:hover { background:var(--green); color:#fff }
+  .lang { margin-top:36px; font-size:14px; color:var(--dim) }
+  .lang a { color:var(--dim); margin:0 6px } .lang a[aria-current] { color:var(--ink); text-decoration:none; font-weight:600 }
+</style>
+</head>
+<body>
+<main>
+  <h1><img src="/logo.svg" width="40" height="40" alt=""><span><b>Open</b>Token<b>Mini</b></span></h1>
+  <nav>
+    <a class="go" href="https://docs.opentokenmini.org/analyze/METHOD.html">阅读方法 →</a>
+    <a class="go" href="https://github.com/OpenTokenMini/opentokenmini">获取代码 →</a>
+  </nav>
+  <p class="lead">大多数为 AI 智能体付费的团队，说不清这笔钱买到了什么。</p>
+  <p>OpenTokenMini 是一套开放的方法和参考实现，用来回答这个问题：每个智能体花了多少，花在什么工作上，最后产出了什么。支持 OpenAI、Anthropic 和开源模型。</p>
+  <figure>
+    <img src="/flow.svg" alt="按厂商划分的智能体花费，以及它流向的工作和最终产出">
+  </figure>
+  <p class="small">免费开源。由你自己的智能体安装，并按你的环境调整。环境比较特殊，或者希望我们来搭建？<br><a class="talk" href="https://forms.gle/cqjyqVN9qky4gQ5U6">联系我们，一起搭建 →</a></p>
+  <div class="lang"><a href="/" hreflang="en" >English</a>·<a href="/es/" hreflang="es">Español</a>·<a href="/zh/" hreflang="zh-Hans" aria-current="page">中文</a></div>
+</main>
+<script>
+  // first visit to the English page: follow the browser language once; any click on the switcher sticks
+  document.querySelectorAll(".lang a").forEach(a => a.onclick = () => localStorage.lang = a.hreflang);
+  const want = (navigator.language || "").slice(0, 2);
+  if (location.pathname === "/" && !localStorage.lang && (want === "es" || want === "zh")) location.replace("/" + want + "/");
+</script>
+</body>
+</html>
